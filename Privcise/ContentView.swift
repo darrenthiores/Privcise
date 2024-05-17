@@ -9,40 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var arDelegate: ARViewDelegate = ARViewDelegate()
+    @State private var techniques: [FightTechnique] = []
+    @State private var selectedTechnique: FightTechnique = .defaultTechnique
+    @State var showSideBar = false
+    
     
     var body: some View {
         ZStack {
-            ARView(
-                arDelegate: arDelegate
-            )
-            .ignoresSafeArea()
-            .gesture(
-                SpatialTapGesture(count: 1, coordinateSpace: .global)
-                    .onEnded { value in
-                        print("here")
-                        
-                        arDelegate.renderTap(
-                            touchLocation: value.location
-                        )
-                    }
+            MainView(
+                arDelegate: arDelegate,
+                showSideBar: $showSideBar,
+                selectedTechnique: selectedTechnique
             )
             
-            VStack {
-                Spacer()
-                
-                HStack {
-                    Button {
-                        arDelegate.renderModel()
-                    } label: {
-                        CharacterButtonView(model: "art.scnassets/JabCross.scn")
-                    }
-                    
-                    Spacer()
-                    
-                    Text("Select Text")
-                }
+            if showSideBar {
+                TechniqueSideBar(
+                    techniques: techniques,
+                    showSideBar: $showSideBar,
+                    selectedTechnique: $selectedTechnique
+                )
+                .transition(.move(edge: .leading))
             }
-            .padding()
+        }
+        .onAppear {
+            techniques = FightTechnique.getTechniques()
         }
     }
 }
