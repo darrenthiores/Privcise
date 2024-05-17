@@ -7,20 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C72FFB5F2BF50169006D9346 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FFB5E2BF50169006D9346 /* AppDelegate.swift */; };
 		C72FFB612BF50169006D9346 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = C72FFB602BF50169006D9346 /* art.scnassets */; };
-		C72FFB632BF50169006D9346 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72FFB622BF50169006D9346 /* ViewController.swift */; };
-		C72FFB662BF50169006D9346 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C72FFB642BF50169006D9346 /* Main.storyboard */; };
 		C72FFB682BF5016A006D9346 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C72FFB672BF5016A006D9346 /* Assets.xcassets */; };
+		C79DB8262BF5A22000D78DBE /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DB8252BF5A22000D78DBE /* ARView.swift */; };
+		C79DB8282BF5A27A00D78DBE /* PrivciseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DB8272BF5A27A00D78DBE /* PrivciseApp.swift */; };
+		C79DB82A2BF5A2D300D78DBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DB8292BF5A2D300D78DBE /* ContentView.swift */; };
+		C7B525082BF64D960019AF11 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7B525072BF64D960019AF11 /* LaunchScreen.storyboard */; };
+		C7B5250B2BF64F7B0019AF11 /* CharacterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5250A2BF64F7B0019AF11 /* CharacterButtonView.swift */; };
+		C7B5250D2BF653770019AF11 /* CharacterSceneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B5250C2BF653770019AF11 /* CharacterSceneView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C72FFB5B2BF50169006D9346 /* Privcise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Privcise.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		C72FFB5E2BF50169006D9346 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C72FFB602BF50169006D9346 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		C72FFB622BF50169006D9346 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C72FFB652BF50169006D9346 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C72FFB672BF5016A006D9346 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C79DB8252BF5A22000D78DBE /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
+		C79DB8272BF5A27A00D78DBE /* PrivciseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivciseApp.swift; sourceTree = "<group>"; };
+		C79DB8292BF5A2D300D78DBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C7B525072BF64D960019AF11 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C7B5250A2BF64F7B0019AF11 /* CharacterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterButtonView.swift; sourceTree = "<group>"; };
+		C7B5250C2BF653770019AF11 /* CharacterSceneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterSceneView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,13 +59,48 @@
 		C72FFB5D2BF50169006D9346 /* Privcise */ = {
 			isa = PBXGroup;
 			children = (
-				C72FFB5E2BF50169006D9346 /* AppDelegate.swift */,
+				C79DB8212BF5A1DE00D78DBE /* Models */,
+				C79DB8232BF5A1E700D78DBE /* Views */,
+				C79DB8272BF5A27A00D78DBE /* PrivciseApp.swift */,
+				C79DB8292BF5A2D300D78DBE /* ContentView.swift */,
+				C7B525072BF64D960019AF11 /* LaunchScreen.storyboard */,
 				C72FFB602BF50169006D9346 /* art.scnassets */,
-				C72FFB622BF50169006D9346 /* ViewController.swift */,
-				C72FFB642BF50169006D9346 /* Main.storyboard */,
 				C72FFB672BF5016A006D9346 /* Assets.xcassets */,
 			);
 			path = Privcise;
+			sourceTree = "<group>";
+		};
+		C79DB8212BF5A1DE00D78DBE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C79DB8232BF5A1E700D78DBE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C7B525092BF64F650019AF11 /* Components */,
+				C79DB8242BF5A1F500D78DBE /* Camera */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C79DB8242BF5A1F500D78DBE /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				C79DB8252BF5A22000D78DBE /* ARView.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		C7B525092BF64F650019AF11 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C7B5250A2BF64F7B0019AF11 /* CharacterButtonView.swift */,
+				C7B5250C2BF653770019AF11 /* CharacterSceneView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -120,9 +161,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B525082BF64D960019AF11 /* LaunchScreen.storyboard in Resources */,
 				C72FFB612BF50169006D9346 /* art.scnassets in Resources */,
 				C72FFB682BF5016A006D9346 /* Assets.xcassets in Resources */,
-				C72FFB662BF50169006D9346 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,23 +174,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C72FFB632BF50169006D9346 /* ViewController.swift in Sources */,
-				C72FFB5F2BF50169006D9346 /* AppDelegate.swift in Sources */,
+				C7B5250B2BF64F7B0019AF11 /* CharacterButtonView.swift in Sources */,
+				C7B5250D2BF653770019AF11 /* CharacterSceneView.swift in Sources */,
+				C79DB8262BF5A22000D78DBE /* ARView.swift in Sources */,
+				C79DB82A2BF5A2D300D78DBE /* ContentView.swift in Sources */,
+				C79DB8282BF5A27A00D78DBE /* PrivciseApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		C72FFB642BF50169006D9346 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C72FFB652BF50169006D9346 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C72FFB692BF5016A006D9346 /* Debug */ = {
@@ -282,7 +315,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -311,7 +344,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
