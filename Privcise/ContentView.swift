@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ContentView: View {
     @ObservedObject var arDelegate: ARViewDelegate = ARViewDelegate()
-    @State private var techniques: [FightTechnique] = []
+    @Query private var techniques: [FightTechnique]
     @State private var selectedTechnique: FightTechnique = .defaultTechnique
     @State var showSideBar = false
     
@@ -31,12 +32,12 @@ struct ContentView: View {
                 .transition(.move(edge: .leading))
             }
         }
-        .onAppear {
-            techniques = FightTechnique.getTechniques()
-        }
     }
 }
 
 #Preview {
-    ContentView()
+    let previewContainer: ModelContainer = getPreviewContainer()
+    
+    return ContentView()
+        .modelContainer(previewContainer)
 }

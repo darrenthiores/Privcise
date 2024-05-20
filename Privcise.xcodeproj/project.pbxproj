@@ -13,6 +13,7 @@
 		C738A08C2BF771A6001603DD /* TechniqueSideBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A08B2BF771A6001603DD /* TechniqueSideBar.swift */; };
 		C738A08E2BF77243001603DD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A08D2BF77243001603DD /* MainView.swift */; };
 		C738A0902BF778F4001603DD /* ARViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A08F2BF778F4001603DD /* ARViewDelegate.swift */; };
+		C738A0932BF9A855001603DD /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A0922BF9A855001603DD /* AppContainer.swift */; };
 		C79DB8262BF5A22000D78DBE /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DB8252BF5A22000D78DBE /* ARView.swift */; };
 		C79DB8282BF5A27A00D78DBE /* PrivciseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DB8272BF5A27A00D78DBE /* PrivciseApp.swift */; };
 		C79DB82A2BF5A2D300D78DBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DB8292BF5A2D300D78DBE /* ContentView.swift */; };
@@ -28,6 +29,7 @@
 		C738A08B2BF771A6001603DD /* TechniqueSideBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueSideBar.swift; sourceTree = "<group>"; };
 		C738A08D2BF77243001603DD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C738A08F2BF778F4001603DD /* ARViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewDelegate.swift; sourceTree = "<group>"; };
+		C738A0922BF9A855001603DD /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
 		C79DB8252BF5A22000D78DBE /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		C79DB8272BF5A27A00D78DBE /* PrivciseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivciseApp.swift; sourceTree = "<group>"; };
 		C79DB8292BF5A2D300D78DBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		C72FFB5D2BF50169006D9346 /* Privcise */ = {
 			isa = PBXGroup;
 			children = (
+				C738A0912BF9A84E001603DD /* Utils */,
 				C79DB8212BF5A1DE00D78DBE /* Models */,
 				C79DB8232BF5A1E700D78DBE /* Views */,
 				C79DB8272BF5A27A00D78DBE /* PrivciseApp.swift */,
@@ -74,6 +77,14 @@
 				C72FFB672BF5016A006D9346 /* Assets.xcassets */,
 			);
 			path = Privcise;
+			sourceTree = "<group>";
+		};
+		C738A0912BF9A84E001603DD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C738A0922BF9A855001603DD /* AppContainer.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		C79DB8212BF5A1DE00D78DBE /* Models */ = {
@@ -185,6 +196,7 @@
 			files = (
 				C738A0902BF778F4001603DD /* ARViewDelegate.swift in Sources */,
 				C7B5250B2BF64F7B0019AF11 /* TechniqueButton.swift in Sources */,
+				C738A0932BF9A855001603DD /* AppContainer.swift in Sources */,
 				C738A08E2BF77243001603DD /* MainView.swift in Sources */,
 				C79DB8262BF5A22000D78DBE /* ARView.swift in Sources */,
 				C79DB82A2BF5A2D300D78DBE /* ContentView.swift in Sources */,

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct MainView: View {
     @ObservedObject var arDelegate: ARViewDelegate
@@ -41,23 +42,33 @@ struct MainView: View {
                     }
                     
                     Spacer()
+                    
+                    Text("\(selectedTechnique.count)")
+                        .font(.largeTitle)
+                        .fontWeight(.heavy)
+                }
+                
+                Spacer()
+                    .frame(height: 20)
+                
+                HStack {
+                    Spacer()
+                    Text("Ground Detected: \(arDelegate.planeDetected)")
+                    Spacer()
                 }
             }
             .padding()
-            
-            ZStack {
-                Color.clear
-                
-                Text("Plane Detected: \(arDelegate.planeDetected)")
-            }
         }
     }
 }
 
 #Preview {
-    MainView(
+    let container = getPreviewContainer()
+    
+    return MainView(
         arDelegate: ARViewDelegate(),
         showSideBar: .constant(false),
         selectedTechnique: .defaultTechnique
     )
+    .modelContainer(container)
 }

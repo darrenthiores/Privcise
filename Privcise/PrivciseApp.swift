@@ -6,15 +6,15 @@
 //
 
 import SwiftUI
-
-import SwiftUI
 import SwiftData
 
 @main
+@MainActor
 struct PrivciseApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(appContainer)
     }
 }
