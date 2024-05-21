@@ -13,13 +13,12 @@ class FightTechnique: Identifiable {
     @Attribute(.unique) let id: String
     let assetPath: String
     let name: String
-    let count: Int
+    var count: Int = 0
     
     init(id: String, name: String) {
         self.id = id
         self.assetPath = "art.scnassets/\(id).scn"
         self.name = name
-        self.count = 0
     }
     
     static let defaultTechnique: FightTechnique = .init(

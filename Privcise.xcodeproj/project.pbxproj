@@ -14,6 +14,10 @@
 		C738A08E2BF77243001603DD /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A08D2BF77243001603DD /* MainView.swift */; };
 		C738A0902BF778F4001603DD /* ARViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A08F2BF778F4001603DD /* ARViewDelegate.swift */; };
 		C738A0932BF9A855001603DD /* AppContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A0922BF9A855001603DD /* AppContainer.swift */; };
+		C738A0972BFB5CBD001603DD /* FightTechniqueClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = C738A0962BFB5CBD001603DD /* FightTechniqueClassifier.mlmodel */; };
+		C738A0992BFB610E001603DD /* TechniqueClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A0982BFB610E001603DD /* TechniqueClassifier.swift */; };
+		C738A09B2BFB99F1001603DD /* DeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A09A2BFB99F1001603DD /* DeviceManager.swift */; };
+		C738A0A12BFBB2E1001603DD /* BodyOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C738A0A02BFBB2E1001603DD /* BodyOverlay.swift */; };
 		C79DB8262BF5A22000D78DBE /* ARView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DB8252BF5A22000D78DBE /* ARView.swift */; };
 		C79DB8282BF5A27A00D78DBE /* PrivciseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DB8272BF5A27A00D78DBE /* PrivciseApp.swift */; };
 		C79DB82A2BF5A2D300D78DBE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79DB8292BF5A2D300D78DBE /* ContentView.swift */; };
@@ -30,6 +34,10 @@
 		C738A08D2BF77243001603DD /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		C738A08F2BF778F4001603DD /* ARViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewDelegate.swift; sourceTree = "<group>"; };
 		C738A0922BF9A855001603DD /* AppContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainer.swift; sourceTree = "<group>"; };
+		C738A0962BFB5CBD001603DD /* FightTechniqueClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = FightTechniqueClassifier.mlmodel; sourceTree = "<group>"; };
+		C738A0982BFB610E001603DD /* TechniqueClassifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueClassifier.swift; sourceTree = "<group>"; };
+		C738A09A2BFB99F1001603DD /* DeviceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceManager.swift; sourceTree = "<group>"; };
+		C738A0A02BFBB2E1001603DD /* BodyOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyOverlay.swift; sourceTree = "<group>"; };
 		C79DB8252BF5A22000D78DBE /* ARView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARView.swift; sourceTree = "<group>"; };
 		C79DB8272BF5A27A00D78DBE /* PrivciseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivciseApp.swift; sourceTree = "<group>"; };
 		C79DB8292BF5A2D300D78DBE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,6 +75,7 @@
 		C72FFB5D2BF50169006D9346 /* Privcise */ = {
 			isa = PBXGroup;
 			children = (
+				C738A0942BFB5C8A001603DD /* Resources */,
 				C738A0912BF9A84E001603DD /* Utils */,
 				C79DB8212BF5A1DE00D78DBE /* Models */,
 				C79DB8232BF5A1E700D78DBE /* Views */,
@@ -83,14 +92,49 @@
 			isa = PBXGroup;
 			children = (
 				C738A0922BF9A855001603DD /* AppContainer.swift */,
+				C738A09A2BFB99F1001603DD /* DeviceManager.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		C738A0942BFB5C8A001603DD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C738A0952BFB5C8E001603DD /* MLModel */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C738A0952BFB5C8E001603DD /* MLModel */ = {
+			isa = PBXGroup;
+			children = (
+				C738A0962BFB5CBD001603DD /* FightTechniqueClassifier.mlmodel */,
+			);
+			path = MLModel;
+			sourceTree = "<group>";
+		};
+		C738A09C2BFBA844001603DD /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C738A09D2BFBA84D001603DD /* Components */,
+				C738A08D2BF77243001603DD /* MainView.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C738A09D2BFBA84D001603DD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C738A08B2BF771A6001603DD /* TechniqueSideBar.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		C79DB8212BF5A1DE00D78DBE /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				C738A0892BF76EAD001603DD /* FightTechnique.swift */,
+				C738A0982BFB610E001603DD /* TechniqueClassifier.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -98,6 +142,7 @@
 		C79DB8232BF5A1E700D78DBE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C738A09C2BFBA844001603DD /* Main */,
 				C7B525092BF64F650019AF11 /* Components */,
 				C79DB8242BF5A1F500D78DBE /* Camera */,
 			);
@@ -117,8 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				C7B5250A2BF64F7B0019AF11 /* TechniqueButton.swift */,
-				C738A08B2BF771A6001603DD /* TechniqueSideBar.swift */,
-				C738A08D2BF77243001603DD /* MainView.swift */,
+				C738A0A02BFBB2E1001603DD /* BodyOverlay.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -194,14 +238,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C738A0972BFB5CBD001603DD /* FightTechniqueClassifier.mlmodel in Sources */,
 				C738A0902BF778F4001603DD /* ARViewDelegate.swift in Sources */,
+				C738A09B2BFB99F1001603DD /* DeviceManager.swift in Sources */,
 				C7B5250B2BF64F7B0019AF11 /* TechniqueButton.swift in Sources */,
 				C738A0932BF9A855001603DD /* AppContainer.swift in Sources */,
 				C738A08E2BF77243001603DD /* MainView.swift in Sources */,
+				C738A0A12BFBB2E1001603DD /* BodyOverlay.swift in Sources */,
 				C79DB8262BF5A22000D78DBE /* ARView.swift in Sources */,
 				C79DB82A2BF5A2D300D78DBE /* ContentView.swift in Sources */,
 				C738A08A2BF76EAD001603DD /* FightTechnique.swift in Sources */,
 				C79DB8282BF5A27A00D78DBE /* PrivciseApp.swift in Sources */,
+				C738A0992BFB610E001603DD /* TechniqueClassifier.swift in Sources */,
 				C738A08C2BF771A6001603DD /* TechniqueSideBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

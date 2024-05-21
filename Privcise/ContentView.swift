@@ -10,8 +10,11 @@ import SwiftData
 
 struct ContentView: View {
     @ObservedObject var arDelegate: ARViewDelegate = ARViewDelegate()
+    var classifier: TechniqueClassifier = TechniqueClassifier()
+    
     @Query private var techniques: [FightTechnique]
     @State private var selectedTechnique: FightTechnique = .defaultTechnique
+    @State private var overlayPoints: [CGPoint] = []
     @State var showSideBar = false
     
     
@@ -19,6 +22,8 @@ struct ContentView: View {
         ZStack {
             MainView(
                 arDelegate: arDelegate,
+                techniqueClassifier: classifier,
+                overlayPoints: $overlayPoints,
                 showSideBar: $showSideBar,
                 selectedTechnique: selectedTechnique
             )

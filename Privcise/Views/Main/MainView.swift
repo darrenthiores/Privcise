@@ -10,15 +10,28 @@ import SwiftData
 
 struct MainView: View {
     @ObservedObject var arDelegate: ARViewDelegate
+    let techniqueClassifier: TechniqueClassifier
+    @Binding var overlayPoints: [CGPoint]
     @Binding var showSideBar: Bool
     let selectedTechnique: FightTechnique
     
     var body: some View {
         ZStack {
             ARView(
-                arDelegate: arDelegate
+                arDelegate: arDelegate,
+                techniqueClassifer: techniqueClassifier,
+                onPoseUpdated: { points in
+                    overlayPoints = points
+                },
+                onResultUpdated: { result in
+                    
+                }
             )
             .ignoresSafeArea()
+            .overlay {
+                BodyOverlay(with: overlayPoints)
+                    .foregroundColor(.primary)
+            }
             .gesture(
                 SpatialTapGesture(count: 1, coordinateSpace: .global)
                     .onEnded { value in
@@ -60,6 +73,14 @@ struct MainView: View {
             .padding()
         }
     }
+    
+    private func updateCount(result: String?) {
+        if let result = result {
+            if result == selectedTechnique.id {
+                selectedTechnique.count += 1
+            }
+        }
+    }
 }
 
 #Preview {
@@ -67,6 +88,8 @@ struct MainView: View {
     
     return MainView(
         arDelegate: ARViewDelegate(),
+        techniqueClassifier: TechniqueClassifier(),
+        overlayPoints: .constant([]),
         showSideBar: .constant(false),
         selectedTechnique: .defaultTechnique
     )

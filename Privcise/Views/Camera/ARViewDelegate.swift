@@ -9,13 +9,35 @@ import Foundation
 import ARKit
 import SwiftUI
 
-class ARViewDelegate: NSObject, ARSCNViewDelegate, ObservableObject {
+class ARViewDelegate: NSObject, ARSCNViewDelegate, ObservableObject, ARSessionDelegate {
     var arSCNView: ARSCNView?
+    var techniqueClassifer: TechniqueClassifier?
     @Published var planeDetected: Bool = false
+    
+    var lastSampleDate = Date.distantPast
+    let sampleInterval: TimeInterval = 0.03
     
     func setARView(_ arView: ARSCNView) {
         self.arSCNView = arView
         arView.delegate = self
+        arView.session.delegate = self
+    }
+    
+    func setClassifier(_ classifier: TechniqueClassifier) {
+        self.techniqueClassifer = classifier
+    }
+    
+    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+        let currentDate = Date()
+        guard currentDate.timeIntervalSince(self.lastSampleDate) >= self.sampleInterval else {
+            return
+        }
+        
+        self.lastSampleDate = currentDate
+        
+        print("hereee session")
+        
+        techniqueClassifer?.analyzeCurrentBuffer(pixelBuffer: frame.capturedImage, completion: {  })
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {

@@ -11,10 +11,16 @@ import SwiftData
 @main
 @MainActor
 struct PrivciseApp: App {
+    let modelContainer: ModelContainer
+    
+    init() {
+        modelContainer = appContainer
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
         }
-        .modelContainer(appContainer)
+        .modelContainer(modelContainer)
     }
 }
